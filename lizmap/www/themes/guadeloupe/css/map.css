@@ -283,9 +283,15 @@ Timemanager
 }
 
 /*navbar*/
+#navbar {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 5px 4px 5px 5px;
+}
 #navbar div.slider{
   background : #03DED8;
-  border : solid 1px white;
+/*   border : solid 1px white; */
+  border: none;
 }
 #navbar div.slider a{
   background : #067785;
@@ -293,7 +299,8 @@ Timemanager
 }
 #navbar button.ui-button-icon-only{
   background : #03DED8;
-  border : solid 1px white;
+/*   border : solid 1px white; */
+  border : none;
   border-radius: 5px;
 }
 #navbar button.ui-state-select{
@@ -329,8 +336,11 @@ Timemanager
 
 /*Overview map*/
 #overview-bar {
-  background : none repeat scroll 0% 0% rgb(240, 240, 240);
-  border : solid 1px #ccc;
+  background : none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+/*   border : solid 1px #ccc; */
+  border: none;
+  padding: 2px;
+  border-radius: 5px;
 }
 
 #overview-bar .label {
@@ -377,7 +387,14 @@ Timemanager
 }
 
 #permalink-box {
-  background : rgba(255,255,255,0.5);
+  background : none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+  right: 65px;
+  top: 14px;
+  border-radius: 3px;
+}
+
+#permalink-box a {
+ color: #FFF;    
 }
 
 .alert-info {

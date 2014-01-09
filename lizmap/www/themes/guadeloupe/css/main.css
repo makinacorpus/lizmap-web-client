@@ -17,6 +17,7 @@ a:hover {
 
 #header {
   background : #fff;
+  background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);    
   color : #03DED8;
 }
 #logo {

@@ -30,6 +30,7 @@ only screen and (                   max-device-height : 640px) {
   }
   #header {
     height : 30px;
+    background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);    
   }
   #logo {
     height : 30px;
