@@ -475,7 +475,6 @@ var lizMap = function() {
                ,buffer:0
                ,singleTile:(layerConfig.singleTile == 'True')
                ,order:getLayerOrder(layer)
-               ,wrapDateLine: true
               }));
         }
         // creating the layer tre because it's a group, has children and is not a base layer
@@ -887,7 +886,7 @@ var lizMap = function() {
         $('#locate-layer-'+aName).parent().before('<div class="locate-layer"><select id="locate-layer-'+aName+'-'+locate.filterFieldName+'">'+fOptions+'</select></div><br/>');
         $('#locate-layer-'+aName+'-'+locate.filterFieldName).change(function(){
           var filterValue = $(this).children(':selected').val();
-          console.log(filterValue);
+          //console.log(filterValue);
           var lOptions = '<option value="-1">'+lConfig.title+'</option>';
           for (var fid in locate.features) {
             var feat = locate.features[fid];
@@ -1716,6 +1715,17 @@ var lizMap = function() {
      return info;
   }
 
+  function getPrintScale( scale ) {
+    if (scale >= 9500 && scale <= 950000) {
+      scale = Math.round(scale / 1000) * 1000;
+    } else if (scale >= 950000) {
+      scale = Math.round(scale / 1000000) * 1000000;
+    } else {
+      scale = Math.round(scale);
+    }
+    return scale;
+  }
+
   function addPrintControl() {
     // if no composers removed print
     if (composers.length == 0 ) {
@@ -1734,7 +1744,7 @@ var lizMap = function() {
         var scale = OpenLayers.Util.getScaleFromResolution(res, units);
         scales.push(scale);
       }
-    } 
+    }
     if ( scales == null ) {
       $('#togglePrint').parent().remove();
       return false;
@@ -1742,7 +1752,7 @@ var lizMap = function() {
 
     var scaleOptions = '';
     for( var i=0, len=scales.length; i<len; i++ ){
-      var scale = scales[i];
+      var scale = getPrintScale( scales[i] );
       printCapabilities.scales.push(scale);
       var scaleText = scale;
       if (scale >= 9500 && scale <= 950000) {
@@ -1841,6 +1851,13 @@ var lizMap = function() {
           // get scale and update the select
           var res = map.getResolution()/2;
           var scale = OpenLayers.Util.getScaleFromResolution(res, units);
+          scale = getPrintScale( scale );
+          var scaleIdx = printCapabilities.scales.indexOf( scale );
+          if ( scaleIdx == -1 ) {
+            res = map.getResolution();
+            scale = OpenLayers.Util.getScaleFromResolution(res, units);
+            scale = getPrintScale( scale );
+          }
           $('#print-menu select.btn-print-scales').val(scale);
 
           var center = map.getCenter();
@@ -1900,7 +1917,7 @@ var lizMap = function() {
       dragCtrl.deactivate();
       return false;
     });
-    $('#print-menu select.btn-print-scales').click(function() {
+    $('#print-menu select.btn-print-scales').change(function() {
       if ( dragCtrl.active && layer.getVisibility() ) {
         var self = $(this);
         var units = map.getUnits();
@@ -1954,6 +1971,13 @@ var lizMap = function() {
           var units = map.getUnits();
           var res = map.getResolution()/2;
           var scale = OpenLayers.Util.getScaleFromResolution(res, units);
+          scale = getPrintScale( scale );
+          var scaleIdx = printCapabilities.scales.indexOf( scale );
+          if ( scaleIdx == -1 ) {
+            res = map.getResolution();
+            scale = OpenLayers.Util.getScaleFromResolution(res, units);
+            scale = getPrintScale( scale );
+          }
           $('#print-menu select.btn-print-scales').val(scale);
           var center = map.getCenter();
           var size = printCapabilities.layouts[0].size;
@@ -3913,8 +3937,6 @@ lizMap.events.on({
           // Change repository and project in service URL
           var reg = new RegExp('repository\=(.+)&project\=(.+)', 'g');
           var url = externalService.replace(reg, 'repository='+layerConfig.repository+'&project='+layerConfig.project);
-
-          console.log(url);
 
           // creating the base layer
           layerConfig.title = layerConfig.layerTitle
