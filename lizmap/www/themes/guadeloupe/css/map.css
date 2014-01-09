@@ -105,7 +105,7 @@
 }
 
 #menu {
-  background : #F0F0F0;
+  background : #FFFFFF;
 }
 
 #menu .ui-icon-locate-open {
@@ -271,6 +271,11 @@ Timemanager
   background-image : url("images/download_layer.gif");
 }
 
+#switcher {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
 #baselayer-select-input {
   background : none repeat scroll 0% 0% rgb(240, 240, 240);
   border : solid 1px #DDD;
@@ -279,19 +284,20 @@ Timemanager
 
 /*navbar*/
 #navbar div.slider{
-  background : #C81F2D;
+  background : #03DED8;
   border : solid 1px white;
 }
 #navbar div.slider a{
-  background : black;
-  border : solid 1px black;
+  background : #067785;
+  border : solid 1px #067785;
 }
 #navbar button.ui-button-icon-only{
-  background : #CE1F2D;
+  background : #03DED8;
   border : solid 1px white;
+  border-radius: 5px;
 }
 #navbar button.ui-state-select{
-  background-color : #3A3C3D;
+  background-color : #067785;
 }
 #navbar .ui-state-default .ui-icon {
   background-image : url("images/sprite_20.png");
@@ -324,7 +330,7 @@ Timemanager
 /*Overview map*/
 #overview-bar {
   background : none repeat scroll 0% 0% rgb(240, 240, 240);
-  border : solid 1px #606060;
+  border : solid 1px #ccc;
 }
 
 #overview-bar .label {
@@ -364,6 +370,10 @@ Timemanager
 
 #attribution-box {
   background-color : rgba(255,255,255,0.7);
+}
+
+#attribution-box img {
+  display: none;
 }
 
 #permalink-box {
@@ -473,3 +483,5 @@ Timemanager
   opacity : 0.8;
   background : black;
 }
+
+
