@@ -8,7 +8,7 @@ charset=UTF-8
 ; see http://www.php.net/manual/en/timezones.php for supported values
 timeZone="Europe/Paris"
 
-theme=default
+theme=guadeloupe
 
 pluginsPath="app:plugins/,lib:jelix-plugins/"
 modulesPath="lib:jelix-admin-modules/,lib:jelix-modules/,app:modules/,app:lizmap-modules"
