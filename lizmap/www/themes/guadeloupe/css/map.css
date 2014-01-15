@@ -115,6 +115,13 @@
 #menu h3 .icon {
   background-image : url(images/sprite_20_tools.png);
 }
+
+#toolbar h3,
+#menu h3 {
+  border-top: none;
+  border-bottom: none;
+}
+
 #toolbar .baselayer h3 .icon,
 #menu .baselayer h3 .icon {
   background-position : -40px 0px;
