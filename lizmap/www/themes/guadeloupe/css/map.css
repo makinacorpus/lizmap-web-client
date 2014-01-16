@@ -459,14 +459,25 @@ Timemanager
 .lizmapPopup.olPopup,
 #map-content .lizmapPopup{
   background: #F6F6F6 !important;
-  border: 1px solid #C9C9C9 !important;
+/*   border: 1px solid #C9C9C9 !important; */
+  border: none !important;
   color: black !important;
+  
+  -moz-box-shadow: 4px 4px 3px 0px rgba(20, 20, 20, 0.5);
+  -webkit-box-shadow: 4px 4px 3px 0px rgba(20, 20, 20, 0.5);
+  -o-box-shadow: 4px 4px 3px 0px rgba(20, 20, 20, 0.5);
+  box-shadow: 4px 4px 3px 0px rgba(20, 20, 20, 0.5);
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=134, Strength=3);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;  
 }
 
 .lizmapPopup.olPopup .lizmapPopupContent h4,
 #map-content .lizmapPopupContent h4{
-  background: #2B2B2B !important;
+  background: #067785 !important;
   color : #FBFBFB !important;
+  padding-left: 10px;
 }
 .lizmapPopup.olPopup .lizmapPopupContent a,
 #map-content .lizmapPopupContent a{
@@ -474,17 +485,25 @@ Timemanager
 }
 .lizmapPopup.olPopup .lizmapPopupTable,
 #map-content .lizmapPopupTable{
-  border: 1px solid #2B2B2B !important;
+  border: 1px solid #ccc !important;
+  border-radius: 3px;
 }
 .lizmapPopup.olPopup .lizmapPopupTable thead,
 #map-content .lizmapPopupTable thead {
   color: white;
-  background-color: #81B00E;
-  border-bottom: 1px solid #2B2B2B !important;
+  background-color: #03DED8;
+  border-bottom: 1px solid #FFF !important;
 }
 .lizmapPopup.olPopup .lizmapPopupTable th.left,
 #map-content .lizmapPopupTable th.left{
   border-right: 1px solid #C9C9C9 !important;
+}
+
+.lizmapPopup.olPopup .olPopupCloseBox, 
+#map-content .lizmapPopup .olPopupCloseBox {
+  background-color: #067785;    
+  right: 5px !important;
+  top: 3px !important;  
 }
 
 #edition-modal form {
