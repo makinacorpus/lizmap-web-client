@@ -47,8 +47,11 @@
 <div id="content" class="container">
 {jmessage_bootstrap}
 {$MAIN}
+</div>
+
 <footer class="footer">
   <p class="pull-right">
+        Guadeloupe Eau Carto
   </p>
 </footer>
-</div>
+

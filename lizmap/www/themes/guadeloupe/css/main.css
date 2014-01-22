@@ -1,5 +1,6 @@
 body {
-  background : #EFEFEF;
+  background : #FFF url(img/bg_index.png) right bottom no-repeat;
+  padding-bottom: 0px;
 }
 
 /* for ie 8*/
@@ -88,5 +89,12 @@ a:hover {
 
 #logo h1 {
     margin-left: 200px;    
+}
+
+footer.footer {
+    background: #444;
+    color: #fff;
+    height: 50px;
+    padding: 10px;    
 }
 
