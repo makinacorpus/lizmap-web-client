@@ -35,6 +35,7 @@ class map_headermenuZone extends jZone {
       "geolocation"=>true,
       "timemanager"=>true,
       "print"=>true,
+      "externalLayers"=>true,
     );
 
     $lproj = lizmap::getProject($repository.'~'.$project);

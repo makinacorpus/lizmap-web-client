@@ -150,7 +150,10 @@
 #menu .edition h3 .icon {
   background-position : -200px 0px;
 }
-
+#toolbar .externallayers h3 .icon,
+#menu .externallayers h3 .icon {
+  background-position : -220px -0px;
+}
 /*
 Timemanager
 */
@@ -528,3 +531,27 @@ Timemanager
 }
 
 
+/* Externallayers module */
+.external-layers-popup { 
+    z-index: 99999 !important ;
+}
+
+.external-layers-remove {
+    background-position: -48px -100px;
+}
+
+.external-layers-remove-button {
+    background: none;
+    border: none;
+    top: 4px;
+    margin-left: 10px;
+}
+
+#externallayers-container {
+    border-top: 1px solid #ccc;
+    margin-top: 2px;
+}
+
+#externallayers-list li {
+    list-style: none;
+}

@@ -39,7 +39,7 @@ var lizMap = function() {
    * PRIVATE Property: controls
    * {Object({key:<OpenLayers.Control>})} Dictionary of controls
    */
-  var controls = {};
+  var controls = {};http://localhost/guad_geojson.json
   /**
    * PRIVATE Property: tree
    * {object} The layer's tree
@@ -1615,6 +1615,12 @@ var lizMap = function() {
     else
       $('#nominatim-search').remove();
 
+    if ( ('externalLayers' in configOptions)
+        && configOptions['externalLayers'] == 'True')
+      addExternalLayers();
+    else
+      $('#toggleExternalLayers').parent().remove();
+    
     //addComplexPrintControl();
   }
 
@@ -3016,6 +3022,78 @@ var lizMap = function() {
     });
   }
 
+  function addExternalLayers() {
+    $('#toggleExternalLayers').click(function() {
+        if ( $('#externallayers-menu').is(':visible') ) {
+            $('#toggleExternalLayers').parent().removeClass('active');
+            $('#externallayers-menu').hide();
+        }
+        else {
+            $('#toggleExternalLayers').parent().addClass('active');
+            $('#externallayers-menu').show();
+        }trulyPrivateFunction
+    });
+    
+    
+    $('#dialog-external-layers').dialog({
+        autoOpen: false,
+        dialogClass: "no-close external-layers-popup",
+        modal: true,
+        buttons: {
+            Ok: function() {
+                ext_url = $('#wms-url').val();
+                ext_layers_names = $('#layers-names').val();
+                ext_type = $('#externallayers-type').val()
+                
+                if(ext_url == '' || ext_layers_names == '') {
+                    // TODO: i18n
+                    alert("Vous devez renseigner les deux champs");
+                    return false;
+                }
+                
+                if(ext_type == 'wms') {
+                    // add the new WMS layer to map
+                    var extLayer = new OpenLayers.Layer.WMS(ext_layers_names, ext_url, {layers: ext_layers_names, transparent: "true", format: "image/png"}, {isBaseLayer: false} );
+                    map.addLayer(extLayer);
+                }
+                if(ext_type == 'geojson') {
+                    // add the new GeoJson layer to map
+                    var extLayer = new OpenLayers.Layer.Vector(ext_layers_names, {
+                        projection: "EPSG:4326",
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                            url: ext_url,
+                            format: new OpenLayers.Format.GeoJSON()
+                        })
+                    });                    
+                    map.addLayer(extLayer);
+                }
+
+                // add it to externallayers-list with possibility to remove it
+                var btnId = extLayer.id.split('.').join("");
+                $('#externallayers-list').append('<li id="li-'+extLayer.name+'">'+ext_layers_names+'<button id="'+btnId+'" class="ui-button external-layers-remove-button" name="removeLayer" role="button"><span class="ui-button-icon-primary ui-icon external-layers-remove"></span><span class="ui-button-text"></span></button></li>');                
+                
+                $('#'+btnId).click(function ()
+                {
+                    ll = map.getLayersByName(extLayer.name)
+                    map.removeLayer(ll[0]);
+                    $('#li-'+extLayer.name).remove();
+                });                
+
+                $( this ).dialog( "close" );
+            },
+            Cancel: function() {
+                $( this ).dialog( "close" );
+            }
+        }        
+    });    
+    
+    $('#add-external-layer').click(function(){
+        $( "#dialog-external-layers" ).dialog("open");
+    });
+       
+  }
+  
   /**
    * PRIVATE function: parseData
    * parsing capability

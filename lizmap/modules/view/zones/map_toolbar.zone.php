@@ -25,7 +25,8 @@ class map_toolbarZone extends jZone {
       "print"=>true,
       "geolocation"=>true,
       "locate"=>true,
-      "timemanager"=>true
+      "timemanager"=>true,
+      "externalLayers"=>true,
     );
 
     $lproj = lizmap::getProject($repository.'~'.$project);

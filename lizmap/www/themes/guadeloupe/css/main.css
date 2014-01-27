@@ -82,6 +82,13 @@ a:hover {
   background-position: -80px 0px;
 }
 
+.navbar .nav .externallayers .icon {
+    background-position: -220px -20px;
+}
+.navbar .nav .externallayers a:hover .icon,
+.navbar .nav .externallayers.active a .icon {
+  background-position: -220px 0px;
+}
 
 #toolbar h3, #menu h3 {
     background: none repeat scroll 0 0 #067785;   
@@ -96,5 +103,10 @@ footer.footer {
     color: #fff;
     height: 50px;
     padding: 10px;    
+}
+
+#content footer.footer {
+    background: none;
+    color: #444;
 }
 
