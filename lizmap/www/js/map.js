@@ -3031,9 +3031,8 @@ var lizMap = function() {
         else {
             $('#toggleExternalLayers').parent().addClass('active');
             $('#externallayers-menu').show();
-        }trulyPrivateFunction
+        }
     });
-    
     
     $('#dialog-external-layers').dialog({
         autoOpen: false,
@@ -3046,8 +3045,7 @@ var lizMap = function() {
                 ext_type = $('#externallayers-type').val()
                 
                 if(ext_url == '' || ext_layers_names == '') {
-                    // TODO: i18n
-                    alert("Vous devez renseigner les deux champs");
+                    $('#external-layers-msg').show();
                     return false;
                 }
                 
@@ -3071,7 +3069,7 @@ var lizMap = function() {
 
                 // add it to externallayers-list with possibility to remove it
                 var btnId = extLayer.id.split('.').join("");
-                $('#externallayers-list').append('<li id="li-'+extLayer.name+'">'+ext_layers_names+'<button id="'+btnId+'" class="ui-button external-layers-remove-button" name="removeLayer" role="button"><span class="ui-button-icon-primary ui-icon external-layers-remove"></span><span class="ui-button-text"></span></button></li>');                
+                $('#externallayers-list').append('<li id="li-'+extLayer.name+'" class="'+ext_type+'">'+ext_layers_names+'<button id="'+btnId+'" class="ui-button external-layers-remove-button" name="removeLayer" role="button"><span class="ui-button-icon-primary ui-icon external-layers-remove"></span><span class="ui-button-text"></span></button></li>');                
                 
                 $('#'+btnId).click(function ()
                 {
@@ -3089,6 +3087,7 @@ var lizMap = function() {
     });    
     
     $('#add-external-layer').click(function(){
+        $('#external-layers-msg').hide();
         $( "#dialog-external-layers" ).dialog("open");
     });
        

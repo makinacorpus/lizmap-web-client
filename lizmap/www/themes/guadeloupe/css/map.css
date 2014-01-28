@@ -555,3 +555,16 @@ Timemanager
 #externallayers-list li {
     list-style: none;
 }
+
+#externallayers-list li.wms {
+    list-style-image:url('images/sprite_wms.png');
+}
+
+#externallayers-list li.geojson {
+    list-style-image:url('images/sprite_json.png');
+
+}
+
+#dialog-external-layers .error {
+    color: #FF0000;
+}

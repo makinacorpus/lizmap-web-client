@@ -92,6 +92,7 @@
             <select id="externallayers-type"><option value="wms">WMS</option><option value="geojson">GeoJson (4326)</option></select>
             {@view~map.externallayermenu.url@}: <input type="text" id="wms-url">
             {@view~map.externallayermenu.layersnames@}: <input type="text" id="layers-names">
+            <span id="external-layers-msg" class="error">{@view~map.externallayermenu.dialogerror@}</span>
         </div>
         <button id="add-external-layer" class="btn btn-small btn-success">{@view~map.externallayermenu.addlayerbutton@}</button>
         <div id="externallayers-container"><ul id="externallayers-list"></ul></div>
