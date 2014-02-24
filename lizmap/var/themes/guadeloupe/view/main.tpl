@@ -44,7 +44,7 @@
   </div>
 </div>
 
-<div id="content" class="container">
+<div id="content" class="container index_map">
 {jmessage_bootstrap}
 {$MAIN}
 </div>
