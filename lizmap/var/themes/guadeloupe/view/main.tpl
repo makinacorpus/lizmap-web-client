@@ -50,6 +50,9 @@
 </div>
 
 <footer class="footer">
+  <p class="pull-left">
+    {image $j_themepath.'css/img/logo_footer.png'}
+  </p>
   <p class="pull-right">
         <a href="http://observatoire-eau-guadeloupe.makina-corpus.net/">Guadeloupe Eau Carto</a>
   </p>
