@@ -51,7 +51,7 @@
 
 <footer class="footer">
   <p class="pull-right">
-        Guadeloupe Eau Carto
+        <a href="http://observatoire-eau-guadeloupe.makina-corpus.net/">Guadeloupe Eau Carto</a>
   </p>
 </footer>
 
