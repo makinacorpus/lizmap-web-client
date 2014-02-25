@@ -29,3 +29,8 @@
 .index_map h5 {
     color: #666;
 }
+
+.index_map .directory {
+    float: left;
+    margin-right: 10px;
+}
