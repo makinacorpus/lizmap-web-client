@@ -1,7 +1,17 @@
 .thumbnail {
   background-color: white;
+  width: 210px;
 }
+
+.thumbnails li.span3 {
+  width: 210px; 
+}
+
 .liz-project-desc {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.index_map h2 {
+    color: #03DED8;
 }
