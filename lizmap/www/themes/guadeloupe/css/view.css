@@ -1,6 +1,7 @@
 .thumbnail {
   background-color: white;
   width: 170px;
+  min-height: 250px;
 }
 
 .thumbnails li.span3 {
@@ -37,6 +38,8 @@
 
 .index_map h5 {
     color: #666;
+    font-weight: normal;
+    font-size: 12px;
 }
 
 .index_map .directory {
