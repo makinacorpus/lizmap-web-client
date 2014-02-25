@@ -12,6 +12,20 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.index_map {
+  width: 95%;
+}
+
 .index_map h2 {
     color: #03DED8;
+    border-bottom: 1px dotted #03DED8;
+    font-size: 20px;
+}
+
+.index_map .thumbnails img {
+    width: 150px;
+}
+
+.index_map h5 {
+    color: #666;
 }
