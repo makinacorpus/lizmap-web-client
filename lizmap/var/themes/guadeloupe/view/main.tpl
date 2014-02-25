@@ -50,11 +50,13 @@
 </div>
 
 <footer class="footer">
-  <p class="pull-left">
-    {image $j_themepath.'css/img/logo_footer.png'}
-  </p>
-  <p class="pull-right">
-        <a href="http://observatoire-eau-guadeloupe.makina-corpus.net/">Guadeloupe Eau Carto</a>
-  </p>
+  <div id="inner_footer">
+    <p class="pull-left">
+      <a href="http://www.makina-corpus.com">{image $j_themepath.'css/img/logo_footer.png'}</a>
+    </p>
+    <p class="pull-right">
+	  <a class="cms_link" href="http://observatoire-eau-guadeloupe.makina-corpus.net/">Observatoire de l'eau de la Guadeloupe</a>
+    </p>
+  </div>
 </footer>
 

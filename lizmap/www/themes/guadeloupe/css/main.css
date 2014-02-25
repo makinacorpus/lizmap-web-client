@@ -102,12 +102,27 @@ footer.footer {
     background: #444;
     color: #fff;
     height: 50px;
-    padding: 10px;    
+    padding: 0px;    
+    position:absolute;
+    bottom:0;
+    height: 70px;
+    width:100%;
 }
 
 footer.footer a {
     color: #fff;
 }
+
+footer.footer a.cms_link {
+    line-height: 50px;
+}
+
+footer.footer #inner_footer {
+    padding: 10px;
+}
+
+
+
 
 #content footer.footer {
     background: none;
