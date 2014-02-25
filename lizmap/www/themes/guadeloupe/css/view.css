@@ -1,10 +1,10 @@
 .thumbnail {
   background-color: white;
-  width: 210px;
+  width: 170px;
 }
 
 .thumbnails li.span3 {
-  width: 210px; 
+  width: 170px; 
 }
 
 .liz-project-desc {
@@ -22,6 +22,15 @@
     font-size: 20px;
 }
 
+.index_map ul.thumbnails,
+.index_map ul.thumbnails li {
+    margin-left: 0px;
+}
+
+.index_map ul.thumbnails li {
+    margin-right: 15px;
+}
+
 .index_map .thumbnails img {
     width: 150px;
 }
@@ -33,4 +42,8 @@
 .index_map .directory {
     float: left;
     margin-right: 10px;
+}
+
+.index_map .directory .btn {
+    padding: 3px;
 }
