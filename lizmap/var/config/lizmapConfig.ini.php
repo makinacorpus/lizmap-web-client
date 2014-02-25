@@ -1,7 +1,7 @@
 ;Services
 ;list the different map services (servers, generic parameters, etc.)
 [services]
-wmsServerURL="http://127.0.0.1/cgi-bin/qgis_mapserv.fcgi"
+wmsServerURL="http://observatoire-eau-guadeloupe-gis.makina-corpus.net/cgi-bin/qgis_mapserv.fcgi"
 ;List of URL available for the web client
 defaultRepository=montpellier
 cacheStorageType=file
@@ -17,7 +17,7 @@ debugMode=0
 ; debug mode
 ; on = print debug messages in lizmap/var/log/messages.log
 ; off = no lizmap debug messages
-cacheRootDirectory="/tmp/"
+cacheRootDirectory="/srv/projects/guadeloupe-eau-gis/project/var/tmp"
 ; cache root directory where cache files will be stored
 ; must be writable
 allowUserAccountRequests=off
@@ -25,39 +25,34 @@ allowUserAccountRequests=off
 
 
 
-[repository:montpellier]
-label="LizMap Demo"
-path="../install/qgis/"
+adminContactEmail="sysadmin@makina-corpus.com"
+[repository:qualiteeau]
+label="Qualité de l'eau"
+path="../ftp/qualite_eau/"
 
 
-; Example of a repository wich will have access control
-[repository:intranet]
-label="Lizmap Demo - Intranet"
-path="../install/qgis_intranet/"
+[repository:milieunaturel]
+label="Le milieu naturel"
+path="../ftp/milieu_naturel/"
 
 
+[repository:eaupotable]
+label="L'eau potable"
+path="../ftp/eau_potable_2010/"
 
 
+[repository:autresusageseau]
+label="Autres usages de l'eau"
+path="../ftp/autres_usages_eau/"
 
 
+[repository:assainissement]
+label="L'assainissement"
+path="../ftp/assainissement/"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[repository:risques]
+label="Risques (pollutions, inondations)"
+path="../ftp/risques/"
 
 
