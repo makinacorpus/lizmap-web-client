@@ -104,7 +104,7 @@ footer.footer {
     height: 50px;
     padding: 0px;    
     position:absolute;
-    bottom:0;
+/*     bottom:0; */
     height: 70px;
     width:100%;
 }
