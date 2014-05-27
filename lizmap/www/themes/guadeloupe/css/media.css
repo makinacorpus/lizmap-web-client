@@ -26,23 +26,23 @@ only screen and (                   max-device-height : 640px) {
 
   /* Retina-specific stuff here */
   body{
-    padding-top : 60px;
+    padding-top : 60px !important;
   }
   #header {
-    height : 30px;
-    background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);    
+     height : 75px;
+/*     background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);     */
   }
   #logo {
-    height : 30px;
-    margin: 0px 5px;
-    background : none;
+    height : 65px;
+/*     margin: 0px 5px; */
+/*     background : none; */
   }
-  #logo h1 {
+/*  #logo h1 {
     font-size : 1.5em;
     margin-left: 10px;
     margin: 5px 5px;
     line-height: 20px;
-  }
+  }*/
   #title{
     height : 30px;
     margin : 0px 5px;
@@ -56,8 +56,12 @@ only screen and (                   max-device-height : 640px) {
   #headermenu{
 /*    height:30px;*/
     position: fixed;
-    top: 30px;
+    top: 65px;
   }
+  #content {
+/*     padding-top: 0px; */
+  }
+
   .navbar-inner {
     min-height:30px;
     padding: 0px 10px;

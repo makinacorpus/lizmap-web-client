@@ -1,6 +1,7 @@
 body {
   background : #FFF url(img/bg_index.png) right bottom no-repeat;
   padding-bottom: 0px;
+  padding-top: 60px;
 }
 
 /* for ie 8*/
@@ -18,7 +19,7 @@ a:hover {
 
 #header {
   background : #fff;
-  background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);    
+/*   background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);     */
   color : #03DED8;
 }
 #logo {
@@ -26,20 +27,27 @@ a:hover {
 }
 
 #headermenu {
-  background-color:#03ded8;
-  box-shadow: 0px 3px 2px rgba(20,20,20,0.5)
+  background-color:#fff;
+  top: 65px;
+/*   box-shadow: 0px 3px 2px rgba(20,20,20,0.5) */
 }
 
 #auth {
   background: transparent;
 }
+
+#auth .nav {
+  background: url('images/login-top.png') no-repeat right top;
+}
+
 .navbar .nav > li > a {
-  color: #067785;
+  color: #06cec8;
+  font-size: 14px;
 }
 .navbar .nav .active > a,
 .navbar .nav > li > a:focus ,
 .navbar .nav > li > a:hover {
-  color: white;
+  color: #06cec8;
   background:transparent !important;
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle,
@@ -65,14 +73,16 @@ a:hover {
 }
 .navbar .nav .login a:hover .icon,
 .navbar .nav .login.active a .icon {
-  background-position: -80px -40px;
+  background-position: -80px -60px;
 }
+
+
 .navbar .nav .user .icon {
   background-position: 0px -60px;
 }
 .navbar .nav .user a:hover .icon,
 .navbar .nav .user.active a .icon  {
-  background-position: 0px -40px;
+  background-position: 0px -60px;
 }
 .navbar .nav .home .icon {
   background-position: -80px -20px;
@@ -91,7 +101,7 @@ a:hover {
 }
 
 #toolbar h3, #menu h3 {
-    background: none repeat scroll 0 0 #067785;   
+    background: none repeat scroll 0 0 #03ded8;   
 }
 
 #logo h1 {
@@ -99,18 +109,18 @@ a:hover {
 }
 
 footer.footer {
-    background: #444;
-    color: #fff;
+    background: #fff;
+    color: #CCC;
     height: 50px;
     padding: 0px;    
     position:absolute;
-    bottom:0;
+/*     bottom:0; */
     height: 70px;
     width:100%;
 }
 
 footer.footer a {
-    color: #fff;
+    color: #ccc;
 }
 
 footer.footer a.cms_link {
@@ -129,4 +139,117 @@ footer.footer #inner_footer {
     color: #444;
 }
 
+#content {
+    margin: 0;
+    padding-top: 35px;
+}
 
+#content ul li {
+    list-style: none outside none;
+    padding-left: 20px;
+    line-height: 50px;
+}
+
+
+#content #menu_themes ul li a {
+    color: #eee;
+}
+
+#menu_themes_list li {
+    min-height: 50px;
+    border-bottom: 1px solid #eee;      
+}
+
+#menu_themes_list li.title {
+    color: #eee;
+    background: #06cec7 url(img/theme_list_title.png) no-repeat left top;
+    border-bottom: none;
+    height: 60px;
+}
+
+#content #menu_themes ul li.active a,
+#content #menu_themes ul li a:hover {
+    color: #06cec7;
+}
+
+#content ul li a {
+    text-decoration: none;
+}
+
+#menu_themes_list {
+    margin-left: 0;
+}
+
+
+#menu_themes {
+    color: #eee;
+    background: #3d4242;
+    width: 260px;
+    height: 100%;
+    float: left;
+}
+
+
+#map_themes {
+    float: left;
+    margin-top: 10px;
+}
+
+.theme_map li {
+    list-style: none;
+    width: 180px;
+}
+
+.index_hide {
+    display: none;
+}
+
+.thumbnail {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0;
+}
+
+.index_map .thumbnail h5 {
+    background: #057d85;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;    
+    border: 2px solid #057d85;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.thumbnail .liz-project-img {
+}
+
+.thumbnail .liz-project {
+    background: #057d85;
+    padding: 2px;    
+}
+
+.thumbnail .liz-project-view,
+.thumbnail .liz-project-show-desc {
+    background: #f1a960;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;    
+    border: none;
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+    width: 59px;
+}
+
+#content.content-map {
+    padding-top: 0px;
+}
+
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #03DED8;
+    border-top-color: #03DED8;
+}
