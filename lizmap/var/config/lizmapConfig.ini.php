@@ -1,7 +1,7 @@
 ;Services
 ;list the different map services (servers, generic parameters, etc.)
 [services]
-wmsServerURL="http://127.0.0.1/cgi-bin/qgis_mapserv.fcgi"
+wmsServerURL="http://observatoire-eau-guadeloupe-gis.makina-corpus.net/cgi-bin/qgis_mapserv.fcgi"
 ;List of URL available for the web client
 defaultRepository=montpellier
 cacheStorageType=file
@@ -17,10 +17,11 @@ debugMode=0
 ; debug mode
 ; on = print debug messages in lizmap/var/log/messages.log
 ; off = no lizmap debug messages
-cacheRootDirectory="/tmp/"
+cacheRootDirectory="/srv/projects/guadeloupe-eau-gis/project/var/tmp"
 ; cache root directory where cache files will be stored
 ; must be writable
 allowUserAccountRequests=off
+
 
 
 
@@ -40,10 +41,9 @@ path="/home/sbe/data/guadeloupe/qualite_eau/"
 
 
 
-
-
-
-
+[repository:milieunaturel]
+label="Le milieu naturel"
+path="../ftp/milieu_naturel/"
 
 
 
@@ -65,7 +65,6 @@ path="/home/sbe/data/guadeloupe/milieu_naturel/"
 [repository:autresusageseau]
 label="Autres usages de l'eau"
 path="/home/sbe/data//guadeloupe/autres_usages_eau/"
-
 
 
 
