@@ -25,20 +25,17 @@ allowUserAccountRequests=off
 
 
 
-[repository:montpellier]
-label="LizMap Demo"
-path="../install/qgis/"
-
-
-; Example of a repository wich will have access control
-[repository:intranet]
-label="Lizmap Demo - Intranet"
-path="../install/qgis_intranet/"
+[repository:guadeloupe]
+label="Guadeloupe Canaux"
+path="/home/sbe/projects/guadeloupe-eau-carto/data/guadeloupe/"
 
 
 
 
 
+[repository:qualiteeau]
+label="Qualité de l'eau"
+path="/home/sbe/data/guadeloupe/qualite_eau/"
 
 
 
@@ -50,14 +47,33 @@ path="../install/qgis_intranet/"
 
 
 
+[repository:risques]
+label="Risques (pollutions, inondations)"
+path="/home/sbe/data/guadeloupe/risques/"
+
+
+[repository:assainissement]
+label="L'assainissement"
+path="/home/sbe/data/guadeloupe/assainissement/"
+
+
+[repository:milieunaturel]
+label="Le milieu naturel"
+path="/home/sbe/data/guadeloupe/milieu_naturel/"
+
+
+[repository:autresusageseau]
+label="Autres usages de l'eau"
+path="/home/sbe/data//guadeloupe/autres_usages_eau/"
 
 
 
 
 
 
-
-
+[repository:eaupotable]
+label="Eau potable"
+path="/home/sbe/data/guadeloupe/eau_potable_2010/"
 
 
 

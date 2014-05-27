@@ -6,3 +6,8 @@
 .jforms-error-list li {
     color: #FFF;
 }
+
+
+#auth_login_zone {
+    margin-top: 10px;
+}

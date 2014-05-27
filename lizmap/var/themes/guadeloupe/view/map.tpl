@@ -24,7 +24,7 @@
 
 </div>
 
-<div id="content">
+<div id="content" class="content-map">
 
   <span class="ui-icon ui-icon-open-menu" style="display:none;" title="{@view~map.menu.show.hover@}"></span>
 
