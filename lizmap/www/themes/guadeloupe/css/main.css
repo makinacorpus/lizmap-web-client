@@ -230,6 +230,11 @@ footer.footer #inner_footer {
     padding: 2px;    
 }
 
+
+.thumbnail p {
+    background: #f1a960;
+}
+
 .thumbnail .liz-project-view,
 .thumbnail .liz-project-show-desc {
     background: #f1a960;
@@ -242,6 +247,7 @@ footer.footer #inner_footer {
     text-shadow: none;
     box-shadow: none;
     width: 59px;
+    font-size: 12px;
 }
 
 #content.content-map {

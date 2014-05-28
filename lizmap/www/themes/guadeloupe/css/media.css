@@ -82,6 +82,10 @@ only screen and (                   max-device-height : 640px) {
     bottom:1em;
   }
 
+  #content.content-map {
+    padding-top: 35px;
+  }
+  
 }
 
 /* #### Tablets Portrait or Landscape #### */
