@@ -294,24 +294,24 @@ Timemanager
 
 /*navbar*/
 #navbar {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+/*   background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25); */
   border-radius: 5px;
   padding: 5px 4px 5px 5px;
 }
 #navbar div.slider{
-  background : #03DED8;
+  background : #3f3f3f;
 /*   border : solid 1px white; */
   border: none;
 }
 #navbar div.slider a{
-  background : #067785;
-  border : solid 1px #067785;
+  background : #3f3f3f;
+  border : solid 1px #fff;
 }
 #navbar button.ui-button-icon-only{
-  background : #03DED8;
+  background : #3f3f3f;
 /*   border : solid 1px white; */
   border : none;
-  border-radius: 5px;
+/*   border-radius: 5px; */
 }
 #navbar button.ui-state-select{
   background-color : #067785;
