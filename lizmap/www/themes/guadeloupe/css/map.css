@@ -5,6 +5,10 @@
 #title h2 {
   color : #585858;
 }
+#title {
+    float: left;
+    position: relative;
+}
 #headermenu .navbar-search .icon {
   background-color: transparent;
   background-position: -100px -20px;
