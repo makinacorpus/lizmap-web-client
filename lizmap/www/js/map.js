@@ -1670,9 +1670,24 @@ var lizMap = function() {
                           return false;
                         }
                         );
-                      popup.panMapIfOutOfView = true;
+                      
+                      popup.panMapIfOutOfView = false;
                       map.addPopup(popup);
                       popup.verifySize();
+                      
+                      // to prevent auto positionning of the popup while we drag :
+                      popup.moveTo = function() {
+                        if (dragPopup.down) {
+                            OpenLayers.Popup.prototype.moveTo.apply(this, arguments);
+                        } else {
+                            OpenLayers.Popup.Anchored.prototype.moveTo.apply(this, arguments);
+                        }
+                      }                      
+                      
+                      // Make the popup draggable
+                      var dragPopup = new OpenLayers.Control.DragPopup(popup);
+                      map.addControl(dragPopup);                    
+                      
                       // Hide navbar and overview in mobile mode
                       if(mCheckMobile()){
                         $('#navbar').hide();
