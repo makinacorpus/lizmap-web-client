@@ -344,6 +344,17 @@ Timemanager
   background-position : -25px -80px;
 }
 
+/* Mouse position */
+#mouseposition {
+  background : none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+  font-size: 10px;
+  border: none;
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+
 /*Overview map*/
 #overview-bar {
   background : none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
@@ -378,6 +389,7 @@ Timemanager
   border : solid 1px #606060;
   border-bottom : none;
 }
+
 .olControlOverviewMapElement {
   background-color: rgb(240,240,240);
 }

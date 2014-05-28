@@ -64,6 +64,7 @@
     </span>
     <div id="overview-box">
       <div id="overviewmap" title="{@view~map.overviewmap.hover@}"></div>
+      <div id="mouseposition" title="{@view~map.mouseposition.hover@}"></div>
       <div id="overview-bar">
         <div id="scaleline" class="olControlScaleLine" style="width:100px; position:relative; bottom:0; top:0; left:0;" title="{@view~map.overviewbar.scaleline.hover@}">
         </div>
