@@ -108,6 +108,11 @@ a:hover {
     margin-left: 200px;    
 }
 
+a #logo h1 {
+    text-decoration: none;
+    color: #03ded8;
+}
+
 footer.footer {
     background: #fff;
     color: #CCC;

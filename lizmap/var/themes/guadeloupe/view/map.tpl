@@ -3,9 +3,11 @@
 {meta_html csstheme 'css/media.css'}
 
 <div id="header">
-  <div id="logo">
-    <h1>{$repositoryLabel}</h1>
-  </div>
+  <a href="{jurl 'view~default:index'}">
+    <span id="logo">
+        <h1>{$repositoryLabel}</h1>
+    </span>
+  </a>
   <div id="title">
     <h1>
     {if $WMSServiceTitle}
