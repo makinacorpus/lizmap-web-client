@@ -572,6 +572,12 @@ var lizMap = function() {
 
     html += '</tr>';
 
+    // Add a line for the opacity
+    html += '<tr id="legend-'+aNode.name+'-opacity">';
+    html += '<td colspan="2"><div class=""><div id="'+aNode.name+'" class="opacity-slider"></div></div></td>';
+    html += '</tr>';
+    
+    
     if (nodeConfig.type == 'layer') {
       var url = getLayerLegendGraphicUrl(aNode.name, false);
 
@@ -994,6 +1000,15 @@ var lizMap = function() {
   function createSwitcher() {
     // set the switcher content
     $('#switcher').html(getSwitcherNode(tree,0));
+    
+    // Init the opacity controls
+    $('#switcher').find(".opacity-slider").slider();
+    $( ".opacity-slider" ).on( "slidechange", function( event, ui ) {
+        res_layers = map.getLayersByName(event.currentTarget.id);
+        res_layers[0].setOpacity(1 - ui.value/100);
+    } );
+    
+    
     $('#switcher table.tree').treeTable({
       onNodeShow: function() {
         //updateSwitcherSize();

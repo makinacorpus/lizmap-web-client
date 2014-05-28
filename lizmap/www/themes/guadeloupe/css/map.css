@@ -580,3 +580,13 @@ Timemanager
 #dialog-external-layers .error {
     color: #FF0000;
 }
+
+/* Opacity */
+.ui-slider-horizontal {
+    height: 0.4em;
+    width: 200px;
+}
+.ui-slider .ui-slider-handle {
+    height: 0.6em;
+    top: -0.15em;
+}
