@@ -164,6 +164,7 @@ footer.footer #inner_footer {
 #menu_themes_list li {
     min-height: 50px;
     border-bottom: 1px solid #eee;      
+    background: #3d4242;
 }
 
 #menu_themes_list li.title {
@@ -189,7 +190,6 @@ footer.footer #inner_footer {
 
 #menu_themes {
     color: #eee;
-    background: #3d4242;
     width: 260px;
     height: 100%;
     float: left;
