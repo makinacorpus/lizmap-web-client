@@ -63,9 +63,9 @@
 <footer class="footer">
   <div id="inner_footer">
     <p class="pagination-centered">
-          <a class="cms_link" href="http://www.eauguadeloupe.com">© copyright 2014 | Observatoire de l'eau de la Guadeloupe</a><br/>
+          <a class="cms_link" href="http://observatoire-eau-guadeloupe.makina-corpus.net/">© copyright 2014 | Observatoire de l'eau de la Guadeloupe</a><br/>
           <a href="http://www.makina-corpus.com">{image $j_themepath.'css/img/logo_footer.png'}</a>
-          <a href="http://www.eauguadeloupe.com">{image $j_themepath.'css/img/logo_eauguadeloupe.jpg'}</a>
+          <a href="http://observatoire-eau-guadeloupe.makina-corpus.net/">{image $j_themepath.'css/img/logo_eauguadeloupe.jpg'}</a>
           
     </p>
   </div>
