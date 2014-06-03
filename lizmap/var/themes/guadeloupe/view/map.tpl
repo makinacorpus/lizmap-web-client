@@ -2,6 +2,8 @@
 {meta_html csstheme 'css/map.css'}
 {meta_html csstheme 'css/media.css'}
 
+{meta_html others '<link rel="shortcut icon" type="image/x-icon" href="'.$j_basepath.'themes/guadeloupe/css/img/favicon.png" />' }
+
 <div id="header">
   <a href="{jurl 'view~default:index'}">
     <span id="logo">
