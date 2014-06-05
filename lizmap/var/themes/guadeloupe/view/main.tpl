@@ -3,7 +3,6 @@
 
 {meta_html others '<link rel="shortcut icon" type="image/x-icon" href="'.$j_basepath.'themes/guadeloupe/css/img/favicon.png" />' }
 
-
 <div id="header">
   <div id="logo">
     <h1></h1>
